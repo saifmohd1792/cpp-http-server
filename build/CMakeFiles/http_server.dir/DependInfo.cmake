@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/saifm/http-server/src/epoll_server.cpp" "CMakeFiles/http_server.dir/src/epoll_server.cpp.o" "gcc" "CMakeFiles/http_server.dir/src/epoll_server.cpp.o.d"
   "/home/saifm/http-server/src/handlers.cpp" "CMakeFiles/http_server.dir/src/handlers.cpp.o" "gcc" "CMakeFiles/http_server.dir/src/handlers.cpp.o.d"
   "/home/saifm/http-server/src/http_parser.cpp" "CMakeFiles/http_server.dir/src/http_parser.cpp.o" "gcc" "CMakeFiles/http_server.dir/src/http_parser.cpp.o.d"
   "/home/saifm/http-server/src/http_response.cpp" "CMakeFiles/http_server.dir/src/http_response.cpp.o" "gcc" "CMakeFiles/http_server.dir/src/http_response.cpp.o.d"

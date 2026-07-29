@@ -129,6 +129,30 @@ http_server/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/http_server.dir/build.make CMakeFiles/http_server.dir/build
 .PHONY : http_server/fast
 
+src/epoll_server.o: src/epoll_server.cpp.o
+.PHONY : src/epoll_server.o
+
+# target to build an object file
+src/epoll_server.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http_server.dir/build.make CMakeFiles/http_server.dir/src/epoll_server.cpp.o
+.PHONY : src/epoll_server.cpp.o
+
+src/epoll_server.i: src/epoll_server.cpp.i
+.PHONY : src/epoll_server.i
+
+# target to preprocess a source file
+src/epoll_server.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http_server.dir/build.make CMakeFiles/http_server.dir/src/epoll_server.cpp.i
+.PHONY : src/epoll_server.cpp.i
+
+src/epoll_server.s: src/epoll_server.cpp.s
+.PHONY : src/epoll_server.s
+
+# target to generate assembly for a file
+src/epoll_server.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http_server.dir/build.make CMakeFiles/http_server.dir/src/epoll_server.cpp.s
+.PHONY : src/epoll_server.cpp.s
+
 src/handlers.o: src/handlers.cpp.o
 .PHONY : src/handlers.o
 
@@ -282,6 +306,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... http_server"
+	@echo "... src/epoll_server.o"
+	@echo "... src/epoll_server.i"
+	@echo "... src/epoll_server.s"
 	@echo "... src/handlers.o"
 	@echo "... src/handlers.i"
 	@echo "... src/handlers.s"
