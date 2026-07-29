@@ -1,12 +1,12 @@
 #include "http_server.hpp"
 #include <nlohmann/json.hpp>
-
+#include "epoll_server.hpp"
 
 int main()
 {
-    HttpServer server;
+  EpollServer server(8080);
 
-    server.run();
+server.start();
 
     return 0;
 }

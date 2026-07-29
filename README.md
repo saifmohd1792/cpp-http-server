@@ -21,8 +21,5 @@ mkdir build
 cd build
 cmake ..
 make
-<<<<<<< HEAD
 ./http_server
-=======
 ./http_server
->>>>>>> 0f30e2f (Optimize router with single-pass path matching)

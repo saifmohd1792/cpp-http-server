@@ -12,6 +12,8 @@ add_executable(
     src/http_router.cpp
     src/http_response.cpp
     src/handlers.cpp
+    src/epoll_server.cpp
+    
 )
 
 target_include_directories(
