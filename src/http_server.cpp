@@ -113,22 +113,18 @@ int HttpServer::accept_client()
 
 std::string HttpServer::receive_request(int client_fd)
 {
-    char buffer[4096] = {0};
+    char buffer[4096];
 
     ssize_t bytes = recv(
         client_fd,
         buffer,
-        sizeof(buffer) - 1,
+        sizeof(buffer),
         0);
 
     if (bytes <= 0)
-    {
         return "";
-    }
 
-    buffer[bytes] = '\0';
-
-    return std::string(buffer);
+    return std::string(buffer, bytes);
 }
 
 void HttpServer::send_response(
@@ -155,8 +151,7 @@ void HttpServer::handle_client(int client_fd)
         return;
     }
 
-    std::cout << "========== REQUEST ==========\n";
-    std::cout << raw_request << '\n';
+  
 
     HttpRequest request =
         HttpParser::parse(raw_request);
@@ -168,5 +163,5 @@ void HttpServer::handle_client(int client_fd)
 
     close(client_fd);
 
-    std::cout << "=============================\n\n";
+    
 }

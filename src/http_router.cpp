@@ -3,52 +3,72 @@
 
 #include <sstream>
 
-static std::vector<std::string> split(const std::string& path)
-{
-    std::vector<std::string> parts;
-
-    std::stringstream ss(path);
-
-    std::string part;
-
-    while (std::getline(ss, part, '/'))
-    {
-        if (!part.empty())
-            parts.push_back(part);
-    }
-
-    return parts;
-}
 
 static bool match_route(
     const std::string& pattern,
     const std::string& path,
     HttpRequest& request)
 {
-    auto pattern_parts = split(pattern);
-    auto path_parts = split(path);
-
-    if (pattern_parts.size() != path_parts.size())
-        return false;
-
     request.params.clear();
 
-    for (size_t i = 0; i < pattern_parts.size(); i++)
+    size_t p = 0; // pattern index
+    size_t s = 0; // path index
+
+    while (true)
     {
-        const auto& pattern_part = pattern_parts[i];
-        const auto& path_part = path_parts[i];
+        // Skip leading '/'
+        while (p < pattern.size() && pattern[p] == '/')
+            ++p;
 
-        if (!pattern_part.empty() && pattern_part[0] == ':')
-        {
-            request.params[pattern_part.substr(1)] = path_part;
-        }
-        else if (pattern_part != path_part)
-        {
+        while (s < path.size() && path[s] == '/')
+            ++s;
+
+        // Both strings completely consumed
+        if (p == pattern.size() && s == path.size())
+            return true;
+
+        // One finished before the other
+        if (p == pattern.size() || s == path.size())
             return false;
-        }
-    }
 
-    return true;
+        // Find end of current pattern segment
+        size_t p_end = p;
+        while (p_end < pattern.size() && pattern[p_end] != '/')
+            ++p_end;
+
+        // Find end of current path segment
+        size_t s_end = s;
+        while (s_end < path.size() && path[s_end] != '/')
+            ++s_end;
+
+        // Parameter segment (e.g. :id)
+        if (pattern[p] == ':')
+        {
+            request.params.emplace(
+                pattern.substr(p + 1, p_end - p - 1),
+                path.substr(s, s_end - s));
+        }
+        else
+        {
+            // Static segment length must match
+            size_t pattern_len = p_end - p;
+            size_t path_len = s_end - s;
+
+            if (pattern_len != path_len)
+                return false;
+
+            // Compare characters directly
+            for (size_t i = 0; i < pattern_len; ++i)
+            {
+                if (pattern[p + i] != path[s + i])
+                    return false;
+            }
+        }
+
+        // Move to next segment
+        p = p_end;
+        s = s_end;
+    }
 }
 Router::Router()
 {
@@ -62,6 +82,7 @@ Router::Router()
 
    
     post("/test", Handlers::test_post);
+      get("/bench", Handlers::benchmark);
 }
 
 void Router::get(

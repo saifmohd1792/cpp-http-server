@@ -19,4 +19,6 @@ public:
 
     static HttpResponse test_post(
     const HttpRequest& request);
+
+    static HttpResponse benchmark(const HttpRequest&);
 };

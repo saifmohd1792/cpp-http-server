@@ -56,3 +56,10 @@ HttpResponse Handlers::test_post(const HttpRequest& request)
 
     return response;
 }
+
+HttpResponse Handlers::benchmark(const HttpRequest&)
+{
+    HttpResponse response;
+    response.body = "OK";
+    return response;
+}

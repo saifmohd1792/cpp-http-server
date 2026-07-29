@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/saifm/http-server/include
 
-CXX_FLAGS = -std=gnu++20
+CXX_FLAGS = -O3 -DNDEBUG -march=native -flto
 
