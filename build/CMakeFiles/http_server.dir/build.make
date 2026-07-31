@@ -83,19 +83,19 @@ CMakeFiles/http_server.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/http_server.dir/src/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/saifm/http-server/src/main.cpp -o CMakeFiles/http_server.dir/src/main.cpp.s
 
-CMakeFiles/http_server.dir/src/http_server.cpp.o: CMakeFiles/http_server.dir/flags.make
-CMakeFiles/http_server.dir/src/http_server.cpp.o: ../src/http_server.cpp
-CMakeFiles/http_server.dir/src/http_server.cpp.o: CMakeFiles/http_server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/saifm/http-server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/http_server.dir/src/http_server.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/http_server.dir/src/http_server.cpp.o -MF CMakeFiles/http_server.dir/src/http_server.cpp.o.d -o CMakeFiles/http_server.dir/src/http_server.cpp.o -c /home/saifm/http-server/src/http_server.cpp
+CMakeFiles/http_server.dir/src/connection.cpp.o: CMakeFiles/http_server.dir/flags.make
+CMakeFiles/http_server.dir/src/connection.cpp.o: ../src/connection.cpp
+CMakeFiles/http_server.dir/src/connection.cpp.o: CMakeFiles/http_server.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/saifm/http-server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/http_server.dir/src/connection.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/http_server.dir/src/connection.cpp.o -MF CMakeFiles/http_server.dir/src/connection.cpp.o.d -o CMakeFiles/http_server.dir/src/connection.cpp.o -c /home/saifm/http-server/src/connection.cpp
 
-CMakeFiles/http_server.dir/src/http_server.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/http_server.dir/src/http_server.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/saifm/http-server/src/http_server.cpp > CMakeFiles/http_server.dir/src/http_server.cpp.i
+CMakeFiles/http_server.dir/src/connection.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/http_server.dir/src/connection.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/saifm/http-server/src/connection.cpp > CMakeFiles/http_server.dir/src/connection.cpp.i
 
-CMakeFiles/http_server.dir/src/http_server.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/http_server.dir/src/http_server.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/saifm/http-server/src/http_server.cpp -o CMakeFiles/http_server.dir/src/http_server.cpp.s
+CMakeFiles/http_server.dir/src/connection.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/http_server.dir/src/connection.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/saifm/http-server/src/connection.cpp -o CMakeFiles/http_server.dir/src/connection.cpp.s
 
 CMakeFiles/http_server.dir/src/http_parser.cpp.o: CMakeFiles/http_server.dir/flags.make
 CMakeFiles/http_server.dir/src/http_parser.cpp.o: ../src/http_parser.cpp
@@ -167,29 +167,77 @@ CMakeFiles/http_server.dir/src/epoll_server.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/http_server.dir/src/epoll_server.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/saifm/http-server/src/epoll_server.cpp -o CMakeFiles/http_server.dir/src/epoll_server.cpp.s
 
+CMakeFiles/http_server.dir/src/config.cpp.o: CMakeFiles/http_server.dir/flags.make
+CMakeFiles/http_server.dir/src/config.cpp.o: ../src/config.cpp
+CMakeFiles/http_server.dir/src/config.cpp.o: CMakeFiles/http_server.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/saifm/http-server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/http_server.dir/src/config.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/http_server.dir/src/config.cpp.o -MF CMakeFiles/http_server.dir/src/config.cpp.o.d -o CMakeFiles/http_server.dir/src/config.cpp.o -c /home/saifm/http-server/src/config.cpp
+
+CMakeFiles/http_server.dir/src/config.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/http_server.dir/src/config.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/saifm/http-server/src/config.cpp > CMakeFiles/http_server.dir/src/config.cpp.i
+
+CMakeFiles/http_server.dir/src/config.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/http_server.dir/src/config.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/saifm/http-server/src/config.cpp -o CMakeFiles/http_server.dir/src/config.cpp.s
+
+CMakeFiles/http_server.dir/src/socket.cpp.o: CMakeFiles/http_server.dir/flags.make
+CMakeFiles/http_server.dir/src/socket.cpp.o: ../src/socket.cpp
+CMakeFiles/http_server.dir/src/socket.cpp.o: CMakeFiles/http_server.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/saifm/http-server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/http_server.dir/src/socket.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/http_server.dir/src/socket.cpp.o -MF CMakeFiles/http_server.dir/src/socket.cpp.o.d -o CMakeFiles/http_server.dir/src/socket.cpp.o -c /home/saifm/http-server/src/socket.cpp
+
+CMakeFiles/http_server.dir/src/socket.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/http_server.dir/src/socket.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/saifm/http-server/src/socket.cpp > CMakeFiles/http_server.dir/src/socket.cpp.i
+
+CMakeFiles/http_server.dir/src/socket.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/http_server.dir/src/socket.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/saifm/http-server/src/socket.cpp -o CMakeFiles/http_server.dir/src/socket.cpp.s
+
+CMakeFiles/http_server.dir/src/logger.cpp.o: CMakeFiles/http_server.dir/flags.make
+CMakeFiles/http_server.dir/src/logger.cpp.o: ../src/logger.cpp
+CMakeFiles/http_server.dir/src/logger.cpp.o: CMakeFiles/http_server.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/saifm/http-server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/http_server.dir/src/logger.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/http_server.dir/src/logger.cpp.o -MF CMakeFiles/http_server.dir/src/logger.cpp.o.d -o CMakeFiles/http_server.dir/src/logger.cpp.o -c /home/saifm/http-server/src/logger.cpp
+
+CMakeFiles/http_server.dir/src/logger.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/http_server.dir/src/logger.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/saifm/http-server/src/logger.cpp > CMakeFiles/http_server.dir/src/logger.cpp.i
+
+CMakeFiles/http_server.dir/src/logger.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/http_server.dir/src/logger.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/saifm/http-server/src/logger.cpp -o CMakeFiles/http_server.dir/src/logger.cpp.s
+
 # Object files for target http_server
 http_server_OBJECTS = \
 "CMakeFiles/http_server.dir/src/main.cpp.o" \
-"CMakeFiles/http_server.dir/src/http_server.cpp.o" \
+"CMakeFiles/http_server.dir/src/connection.cpp.o" \
 "CMakeFiles/http_server.dir/src/http_parser.cpp.o" \
 "CMakeFiles/http_server.dir/src/http_router.cpp.o" \
 "CMakeFiles/http_server.dir/src/http_response.cpp.o" \
 "CMakeFiles/http_server.dir/src/handlers.cpp.o" \
-"CMakeFiles/http_server.dir/src/epoll_server.cpp.o"
+"CMakeFiles/http_server.dir/src/epoll_server.cpp.o" \
+"CMakeFiles/http_server.dir/src/config.cpp.o" \
+"CMakeFiles/http_server.dir/src/socket.cpp.o" \
+"CMakeFiles/http_server.dir/src/logger.cpp.o"
 
 # External object files for target http_server
 http_server_EXTERNAL_OBJECTS =
 
 http_server: CMakeFiles/http_server.dir/src/main.cpp.o
-http_server: CMakeFiles/http_server.dir/src/http_server.cpp.o
+http_server: CMakeFiles/http_server.dir/src/connection.cpp.o
 http_server: CMakeFiles/http_server.dir/src/http_parser.cpp.o
 http_server: CMakeFiles/http_server.dir/src/http_router.cpp.o
 http_server: CMakeFiles/http_server.dir/src/http_response.cpp.o
 http_server: CMakeFiles/http_server.dir/src/handlers.cpp.o
 http_server: CMakeFiles/http_server.dir/src/epoll_server.cpp.o
+http_server: CMakeFiles/http_server.dir/src/config.cpp.o
+http_server: CMakeFiles/http_server.dir/src/socket.cpp.o
+http_server: CMakeFiles/http_server.dir/src/logger.cpp.o
 http_server: CMakeFiles/http_server.dir/build.make
 http_server: CMakeFiles/http_server.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/saifm/http-server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable http_server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/saifm/http-server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable http_server"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/http_server.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

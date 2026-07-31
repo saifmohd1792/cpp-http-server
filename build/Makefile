@@ -129,6 +129,54 @@ http_server/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/http_server.dir/build.make CMakeFiles/http_server.dir/build
 .PHONY : http_server/fast
 
+src/config.o: src/config.cpp.o
+.PHONY : src/config.o
+
+# target to build an object file
+src/config.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http_server.dir/build.make CMakeFiles/http_server.dir/src/config.cpp.o
+.PHONY : src/config.cpp.o
+
+src/config.i: src/config.cpp.i
+.PHONY : src/config.i
+
+# target to preprocess a source file
+src/config.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http_server.dir/build.make CMakeFiles/http_server.dir/src/config.cpp.i
+.PHONY : src/config.cpp.i
+
+src/config.s: src/config.cpp.s
+.PHONY : src/config.s
+
+# target to generate assembly for a file
+src/config.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http_server.dir/build.make CMakeFiles/http_server.dir/src/config.cpp.s
+.PHONY : src/config.cpp.s
+
+src/connection.o: src/connection.cpp.o
+.PHONY : src/connection.o
+
+# target to build an object file
+src/connection.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http_server.dir/build.make CMakeFiles/http_server.dir/src/connection.cpp.o
+.PHONY : src/connection.cpp.o
+
+src/connection.i: src/connection.cpp.i
+.PHONY : src/connection.i
+
+# target to preprocess a source file
+src/connection.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http_server.dir/build.make CMakeFiles/http_server.dir/src/connection.cpp.i
+.PHONY : src/connection.cpp.i
+
+src/connection.s: src/connection.cpp.s
+.PHONY : src/connection.s
+
+# target to generate assembly for a file
+src/connection.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http_server.dir/build.make CMakeFiles/http_server.dir/src/connection.cpp.s
+.PHONY : src/connection.cpp.s
+
 src/epoll_server.o: src/epoll_server.cpp.o
 .PHONY : src/epoll_server.o
 
@@ -249,29 +297,29 @@ src/http_router.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/http_server.dir/build.make CMakeFiles/http_server.dir/src/http_router.cpp.s
 .PHONY : src/http_router.cpp.s
 
-src/http_server.o: src/http_server.cpp.o
-.PHONY : src/http_server.o
+src/logger.o: src/logger.cpp.o
+.PHONY : src/logger.o
 
 # target to build an object file
-src/http_server.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/http_server.dir/build.make CMakeFiles/http_server.dir/src/http_server.cpp.o
-.PHONY : src/http_server.cpp.o
+src/logger.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http_server.dir/build.make CMakeFiles/http_server.dir/src/logger.cpp.o
+.PHONY : src/logger.cpp.o
 
-src/http_server.i: src/http_server.cpp.i
-.PHONY : src/http_server.i
+src/logger.i: src/logger.cpp.i
+.PHONY : src/logger.i
 
 # target to preprocess a source file
-src/http_server.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/http_server.dir/build.make CMakeFiles/http_server.dir/src/http_server.cpp.i
-.PHONY : src/http_server.cpp.i
+src/logger.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http_server.dir/build.make CMakeFiles/http_server.dir/src/logger.cpp.i
+.PHONY : src/logger.cpp.i
 
-src/http_server.s: src/http_server.cpp.s
-.PHONY : src/http_server.s
+src/logger.s: src/logger.cpp.s
+.PHONY : src/logger.s
 
 # target to generate assembly for a file
-src/http_server.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/http_server.dir/build.make CMakeFiles/http_server.dir/src/http_server.cpp.s
-.PHONY : src/http_server.cpp.s
+src/logger.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http_server.dir/build.make CMakeFiles/http_server.dir/src/logger.cpp.s
+.PHONY : src/logger.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
@@ -297,6 +345,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/http_server.dir/build.make CMakeFiles/http_server.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/socket.o: src/socket.cpp.o
+.PHONY : src/socket.o
+
+# target to build an object file
+src/socket.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http_server.dir/build.make CMakeFiles/http_server.dir/src/socket.cpp.o
+.PHONY : src/socket.cpp.o
+
+src/socket.i: src/socket.cpp.i
+.PHONY : src/socket.i
+
+# target to preprocess a source file
+src/socket.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http_server.dir/build.make CMakeFiles/http_server.dir/src/socket.cpp.i
+.PHONY : src/socket.cpp.i
+
+src/socket.s: src/socket.cpp.s
+.PHONY : src/socket.s
+
+# target to generate assembly for a file
+src/socket.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http_server.dir/build.make CMakeFiles/http_server.dir/src/socket.cpp.s
+.PHONY : src/socket.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -306,6 +378,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... http_server"
+	@echo "... src/config.o"
+	@echo "... src/config.i"
+	@echo "... src/config.s"
+	@echo "... src/connection.o"
+	@echo "... src/connection.i"
+	@echo "... src/connection.s"
 	@echo "... src/epoll_server.o"
 	@echo "... src/epoll_server.i"
 	@echo "... src/epoll_server.s"
@@ -321,12 +399,15 @@ help:
 	@echo "... src/http_router.o"
 	@echo "... src/http_router.i"
 	@echo "... src/http_router.s"
-	@echo "... src/http_server.o"
-	@echo "... src/http_server.i"
-	@echo "... src/http_server.s"
+	@echo "... src/logger.o"
+	@echo "... src/logger.i"
+	@echo "... src/logger.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/socket.o"
+	@echo "... src/socket.i"
+	@echo "... src/socket.s"
 .PHONY : help
 
 

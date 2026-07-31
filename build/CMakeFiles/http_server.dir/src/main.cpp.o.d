@@ -306,5 +306,8 @@ CMakeFiles/http_server.dir/src/main.cpp.o: \
  /usr/include/nlohmann/detail/macro_unscope.hpp \
  /usr/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
  /home/saifm/http-server/include/epoll_server.hpp \
+ /home/saifm/http-server/include/connection.hpp \
+ /home/saifm/http-server/include/socket.hpp \
+ /home/saifm/http-server/include/config.hpp \
  /usr/include/x86_64-linux-gnu/sys/epoll.h \
  /usr/include/x86_64-linux-gnu/bits/epoll.h

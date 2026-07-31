@@ -1,4 +1,8 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/http_server.dir/src/config.cpp.o"
+  "CMakeFiles/http_server.dir/src/config.cpp.o.d"
+  "CMakeFiles/http_server.dir/src/connection.cpp.o"
+  "CMakeFiles/http_server.dir/src/connection.cpp.o.d"
   "CMakeFiles/http_server.dir/src/epoll_server.cpp.o"
   "CMakeFiles/http_server.dir/src/epoll_server.cpp.o.d"
   "CMakeFiles/http_server.dir/src/handlers.cpp.o"
@@ -9,10 +13,12 @@ file(REMOVE_RECURSE
   "CMakeFiles/http_server.dir/src/http_response.cpp.o.d"
   "CMakeFiles/http_server.dir/src/http_router.cpp.o"
   "CMakeFiles/http_server.dir/src/http_router.cpp.o.d"
-  "CMakeFiles/http_server.dir/src/http_server.cpp.o"
-  "CMakeFiles/http_server.dir/src/http_server.cpp.o.d"
+  "CMakeFiles/http_server.dir/src/logger.cpp.o"
+  "CMakeFiles/http_server.dir/src/logger.cpp.o.d"
   "CMakeFiles/http_server.dir/src/main.cpp.o"
   "CMakeFiles/http_server.dir/src/main.cpp.o.d"
+  "CMakeFiles/http_server.dir/src/socket.cpp.o"
+  "CMakeFiles/http_server.dir/src/socket.cpp.o.d"
   "http_server"
   "http_server.pdb"
 )
