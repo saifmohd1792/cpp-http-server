@@ -345,6 +345,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/http_server.dir/build.make CMakeFiles/http_server.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/radix_tree.o: src/radix_tree.cpp.o
+.PHONY : src/radix_tree.o
+
+# target to build an object file
+src/radix_tree.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http_server.dir/build.make CMakeFiles/http_server.dir/src/radix_tree.cpp.o
+.PHONY : src/radix_tree.cpp.o
+
+src/radix_tree.i: src/radix_tree.cpp.i
+.PHONY : src/radix_tree.i
+
+# target to preprocess a source file
+src/radix_tree.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http_server.dir/build.make CMakeFiles/http_server.dir/src/radix_tree.cpp.i
+.PHONY : src/radix_tree.cpp.i
+
+src/radix_tree.s: src/radix_tree.cpp.s
+.PHONY : src/radix_tree.s
+
+# target to generate assembly for a file
+src/radix_tree.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http_server.dir/build.make CMakeFiles/http_server.dir/src/radix_tree.cpp.s
+.PHONY : src/radix_tree.cpp.s
+
 src/socket.o: src/socket.cpp.o
 .PHONY : src/socket.o
 
@@ -405,6 +429,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/radix_tree.o"
+	@echo "... src/radix_tree.i"
+	@echo "... src/radix_tree.s"
 	@echo "... src/socket.o"
 	@echo "... src/socket.i"
 	@echo "... src/socket.s"

@@ -17,6 +17,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/http_server.dir/src/logger.cpp.o.d"
   "CMakeFiles/http_server.dir/src/main.cpp.o"
   "CMakeFiles/http_server.dir/src/main.cpp.o.d"
+  "CMakeFiles/http_server.dir/src/radix_tree.cpp.o"
+  "CMakeFiles/http_server.dir/src/radix_tree.cpp.o.d"
   "CMakeFiles/http_server.dir/src/socket.cpp.o"
   "CMakeFiles/http_server.dir/src/socket.cpp.o.d"
   "http_server"

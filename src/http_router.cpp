@@ -1,6 +1,7 @@
 #include "http_router.hpp"
 #include "handlers.hpp"
-
+#include "radix_tree.hpp"
+#include "radix_node.hpp"
 #include <sstream>
 
 
@@ -89,50 +90,63 @@ void Router::get(
     const std::string& pattern,
     Handler handler)
 {
-    routes.push_back(
-        {"GET", pattern, handler});
+    get_tree_.insert(
+        pattern,
+        std::move(handler));
 }
 
 void Router::post(
     const std::string& pattern,
     Handler handler)
 {
-    routes.push_back(
-        {"POST", pattern, handler});
+    post_tree_.insert(
+        pattern,
+        std::move(handler));
 }
 
 void Router::put(
     const std::string& pattern,
     Handler handler)
 {
-    routes.push_back(
-        {"PUT", pattern, handler});
+    put_tree_.insert(
+        pattern,
+        std::move(handler));
 }
 
 void Router::del(
     const std::string& pattern,
     Handler handler)
 {
-    routes.push_back(
-        {"DELETE", pattern, handler});
+    delete_tree_.insert(
+        pattern,
+        std::move(handler));
 }
+
 
 HttpResponse Router::route(HttpRequest& request)
 {
-    for (const auto& route : routes)
-    {
-        if (route.method != request.method)
-{
-    continue;
-}
+    Handler handler;
 
-if (match_route(
-        route.pattern,
-        request.path,
-        request))
-{
-    return route.handler(request);
-}
+    if (request.method == "GET")
+    {
+        handler = get_tree_.find(request);
+    }
+    else if (request.method == "POST")
+    {
+        handler = post_tree_.find(request);
+    }
+    else if (request.method == "PUT")
+    {
+        handler = put_tree_.find(request);
+    }
+    else if (request.method == "DELETE")
+    {
+        handler = delete_tree_.find(request);
+    }
+
+    if (handler)
+    {
+        return handler(request);
     }
 
     return Handlers::not_found(request);
